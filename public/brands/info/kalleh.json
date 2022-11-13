@@ -1,0 +1,18 @@
+{
+  "title": "کاله",
+  "description": "شرح خلاصه وضعیت کاله",
+  "logo": "kalleh.png",
+  "content": "شرح کامل از این که کاله چطور به سرکوب کمک کرده",
+  "links": [
+    {
+      "title": "توییت",
+      "href": "https://twitter.com"
+    }
+  ],
+  "attributes": [
+    {
+      "key": "وضعیت",
+      "value": "نامشخص"
+    }
+  ]
+}

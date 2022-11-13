@@ -1,0 +1,18 @@
+{
+  "title": "کافه بازار",
+  "description": "شرح خلاصه وضعیت کافه بازار",
+  "logo": "cafebazaar.jpg",
+  "content": "شرح کامل از این که کافه بازار چطور به سرکوب کمک کرده",
+  "links": [
+    {
+      "title": "توییت",
+      "href": "https://twitter.com"
+    }
+  ],
+  "attributes": [
+    {
+      "key": "وضعیت",
+      "value": "نامشخص"
+    }
+  ]
+}

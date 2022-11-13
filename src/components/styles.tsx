@@ -1,13 +1,15 @@
 import { css, createGlobalStyle } from 'styled-components';
 import 'sanitize.css';
 import 'resources/css/opensans.css';
+import 'antd/dist/antd.css';
 
 const additional = css`
   :root {
     --white: #ffffff;
+    --light-gray: #ededed;
     --black: #000000;
-    --twitter: #1da1f2;
-    --nuke: #ffff00;
+    --blue: #1da1f2;
+    --yellow: #ffff00;
     --green: #009a3a;
     --red: #c41932;
   }
