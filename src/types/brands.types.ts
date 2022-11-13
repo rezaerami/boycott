@@ -11,7 +11,8 @@ export interface BrandType {
   title: string;
   description: string;
   logo: string;
-  content: string;
-  links: BrandLinkType[];
-  attributes: BrandAttributeType[];
+  content?: string;
+  links?: BrandLinkType[];
+  alternatives?: string[];
+  attributes?: BrandAttributeType[];
 }

@@ -38,11 +38,11 @@ const Home: React.FC<HomePropTypes> = ({ className }: HomePropTypes) => {
         ))}
       </Row>
       <Modal
-        open={selectedBrand !== null}
+        open={!!selectedBrand}
         onCancel={() => setSelectedBrand(null)}
         footer={false}
       >
-        {selectedBrand !== null && <BrandDetails brand={selectedBrand} />}
+        {!!selectedBrand && <BrandDetails brand={selectedBrand} />}
       </Modal>
     </StyledHomeWrapper>
   );

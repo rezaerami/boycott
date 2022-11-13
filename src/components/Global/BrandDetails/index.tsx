@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Divider, List, Row, Table, Typography } from 'antd';
+import { Col, Divider, List, Row, Table } from 'antd';
 
 import MESSAGES from 'constants/messages';
 import { BrandType } from 'types/brands.types';
@@ -13,9 +13,9 @@ interface BrandDetailsPropTypes {
 }
 
 const BrandDetails: React.FC<BrandDetailsPropTypes> = ({
-  className,
-  brand,
-}: BrandDetailsPropTypes) => (
+                                                         className,
+                                                         brand,
+                                                       }: BrandDetailsPropTypes) => (
   <StyledBrandDetailWrapper className={className}>
     <Row>
       <Col xs={{ span: 24 }}>
@@ -32,7 +32,7 @@ const BrandDetails: React.FC<BrandDetailsPropTypes> = ({
         <p>{brand.content}</p>
         <Divider />
       </Col>
-      {brand?.links?.length !== 0 && (
+      {!!brand?.links?.length && (
         <Col xs={{ span: 24 }}>
           <List
             header={<div>{MESSAGES.RELATED_LINKS}</div>}
@@ -53,7 +53,7 @@ const BrandDetails: React.FC<BrandDetailsPropTypes> = ({
           />
         </Col>
       )}
-      {brand?.attributes?.length !== 0 && (
+      {!!brand?.attributes?.length && (
         <Col xs={{ span: 24 }}>
           <Table
             direction={'rtl'}
@@ -69,6 +69,16 @@ const BrandDetails: React.FC<BrandDetailsPropTypes> = ({
               },
             ]}
             dataSource={brand.attributes}
+          />
+        </Col>
+      )}
+      {!!brand?.alternatives?.length && (
+        <Col xs={{ span: 24 }}>
+          <List
+            header={<div>{MESSAGES.ALTERNATIVES}</div>}
+            bordered
+            dataSource={brand.alternatives}
+            renderItem={(item) => <List.Item>{item}</List.Item>}
           />
         </Col>
       )}
